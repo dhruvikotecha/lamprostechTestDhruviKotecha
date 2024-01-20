@@ -1,0 +1,15 @@
+Dashboard Link - https://dune.com/dhruvi_kotecha/dhruvikotecha
+
+Query - 1 :
+-----------
+SELECT
+  DATE_TRUNC('day', block_time) AS transaction_day,
+  COUNT(*) AS transaction_count
+FROM polygon.transactions
+GROUP BY
+  DATE_TRUNC('day', block_time)
+ORDER BY
+  DATE_TRUNC('day', block_time)
+
+Insights:
+From this it can be seen that the average number of transactions are highest at the end of 2023 in November and December starting of 2024 for few days that it started to decline.

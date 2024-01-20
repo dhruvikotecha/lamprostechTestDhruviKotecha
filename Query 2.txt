@@ -1,0 +1,4 @@
+SELECT from_name, SUM(op_claimed) AS total
+FROM op_token_distributions_optimism.transfer_mapping
+GROUP BY from_name ORDER BY total DESC 
+LIMIT 10;
